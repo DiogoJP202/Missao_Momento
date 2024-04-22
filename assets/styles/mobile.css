@@ -152,6 +152,7 @@ nav > a{
     text-decoration: none;
     border: 2px solid #000;
     padding: 10px;
+    box-shadow: 3px 4px 0px 0px #000;
     z-index: 1;
 }
 
@@ -171,4 +172,203 @@ nav > a:hover{
     transition: all .4s ease-in-out;
     transform: scale(1.05); 
     box-shadow: 0px 0px 5px #FEF265;
+}
+
+#Principal h1{
+    font-size: 2rem;
+    color: #EBEBEB;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--color2);
+}
+
+#Principal main{
+    position: relative;
+    z-index: -1;
+    padding: 20px 10px;
+    background-color: var(--color3);
+}
+
+#Principal main::after{
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 70vw;
+    background-color: var(--color4);
+}
+
+#Principal main p{
+    position: relative;
+    text-indent: 10px;
+    margin: 30px 0;
+    font-size: 1.3rem;
+    z-index: 1;
+}
+
+#Principal #opcoes{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 25px;
+    background-color: var(--color3);
+    border: 1px solid #000;
+}
+
+#opcoes .opcao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+#opcoes p{
+    max-width: 300px;
+    padding: 10px;
+}
+
+#opcoes h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 3px 4px 0px 0px #000;
+}
+
+.opcao:nth-child(odd) h2{
+    background-color: var(--color1);
+    font-weight: 400;
+    color: #fff;
+}
+
+.opcao:nth-child(even) h2{
+    background-color: var(--color4);
+    font-weight: 400;
+}
+
+#opcoes .opcao:first-of-type{
+    border-bottom: 1px solid #000;
+}
+
+#Segundaria #CTA{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBEB;
+    background-image: url(../images/FundoSegundarioFallout.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#Segundaria #CTA > h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#Segundaria #CTA > h2 span{
+    font-size: 3rem;
+}
+
+
+#Segundaria #CTA > p{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px;
+} 
+
+#Segundaria .informacoes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Segundaria .informacoes .informacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px;
+    font-weight: 600;
+}
+
+#Segundaria .informacoes div:last-of-type{
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    background-color: var(--color4);
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 3px 4px 0px 0px #000;
+}
+
+#Segundaria .informacoes div:last-of-type:hover{
+    transition: all .4s ease-in-out;
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 5px #FEF265;
+}
+
+#redesSociais{
+    padding: 30px;
+    background-color: var(--color2);
+}
+
+#redesSociais .social{
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+}
+
+#redesSociais .social > img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+    border-radius: 25px;
+}
+
+#redesSociais .social p{
+    padding: 15px;
+    color: var(--color4);
+}
+
+#redesSociais .social:last-of-type{
+    flex-direction: row-reverse;
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+#redesSociais .social p img{
+    width: 40px;
+    margin-top: 30px;
+}
+
+#redesSociais .social:last-child p img{
+    float: inline-end;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--color3);
+}
+
+footer img{
+    width: 40px;
+}
+
+footer a{
+    color: var(--color4);
+    text-decoration: none;
 }
