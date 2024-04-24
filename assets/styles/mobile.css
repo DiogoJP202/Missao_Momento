@@ -15,6 +15,7 @@
     --color5: #1EFC1F;
     --color6: #2CDF8F;
     --color7: #001B0D;
+    --color8: #000;
 }
 
 header{
@@ -52,7 +53,7 @@ header{
     width: 80px;
     height: 40px;
     background-color: var(--color3);
-    border: 2px solid #000;
+    border: 2px solid var(--color8);
 }
 
 .switch {
@@ -79,7 +80,7 @@ header{
     background-color: var(--color3);
     -webkit-transition: .4s;
     transition: .4s;
-    border: 2px solid #000;
+    border: 2px solid var(--color8);
 }
 
 .slider:before {
@@ -92,7 +93,7 @@ header{
     background-color: var(--color4);
     -webkit-transition: .4s;
     transition: .4s;
-    border: 1px solid #000;
+    border: 1px solid var(--color8);
 }
 
 input:checked + .slider {
@@ -103,7 +104,7 @@ input:checked + .slider:before {
     -webkit-transform: translateX(40px);
     -ms-transform: translateX(40px);
     transform: translateX(40px);
-    background-color: #000;
+    background-color: var(--color8);
 }
 
 .slider.round {
@@ -147,16 +148,16 @@ nav > a{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #000;
+    color: var(--color8);
     border-radius: 10px;
     text-decoration: none;
-    border: 2px solid #000;
+    border: 2px solid var(--color8);
     padding: 10px;
-    box-shadow: 3px 4px 0px 0px #000;
+    box-shadow: 3px 4px 0px 0px var(--color8);
     z-index: 1;
 }
 
-nav > a::after{
+nav > a .linha{
     content: " ";
     display: block;
     position: relative;
@@ -189,7 +190,7 @@ nav > a:hover{
     background-color: var(--color3);
 }
 
-#Principal main::after{
+#Principal main .linha{
     content: " ";
     display: block;
     width: 50px;
@@ -198,6 +199,7 @@ nav > a:hover{
     top: 0;
     left: 70vw;
     background-color: var(--color4);
+    z-index: 0;
 }
 
 #Principal main p{
@@ -214,7 +216,7 @@ nav > a:hover{
     align-items: center;
     padding: 25px;
     background-color: var(--color3);
-    border: 1px solid #000;
+    border: 1px solid var(--color8);
 }
 
 #opcoes .opcao{
@@ -239,8 +241,8 @@ nav > a:hover{
     height: 70px;
     margin: 10px;
     border-radius: 10px;
-    border: 2px solid #000;
-    box-shadow: 3px 4px 0px 0px #000;
+    border: 2px solid var(--color8);
+    box-shadow: 3px 4px 0px 0px var(--color8);
 }
 
 .opcao:nth-child(odd) h2{
@@ -255,7 +257,7 @@ nav > a:hover{
 }
 
 #opcoes .opcao:first-of-type{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--color8);
 }
 
 #Segundaria #CTA{
@@ -308,8 +310,8 @@ nav > a:hover{
     text-align: center;
     background-color: var(--color4);
     border-radius: 15px;
-    border: 2px solid #000;
-    box-shadow: 3px 4px 0px 0px #000;
+    border: 2px solid var(--color8);
+    box-shadow: 3px 4px 0px 0px var(--color8);
 }
 
 #Segundaria .informacoes div:last-of-type:hover{
@@ -332,7 +334,7 @@ nav > a:hover{
 #redesSociais .social > img{
     width: 150px;
     height: 150px;
-    border: 2px solid #000;
+    border: 2px solid var(--color8);
     border-radius: 25px;
 }
 
@@ -350,6 +352,7 @@ nav > a:hover{
 #redesSociais .social p img{
     width: 40px;
     margin-top: 30px;
+    filter: invert(1);
 }
 
 #redesSociais .social:last-child p img{
@@ -368,7 +371,23 @@ footer img{
     width: 40px;
 }
 
+footer img:first-of-type{
+    width: 40px;
+    transform: scaleX(-1);
+}
+
 footer a{
     color: var(--color4);
     text-decoration: none;
 }
+
+/* .letraVerde{ } */
+.lv{ color: #0f0 !important; }
+/* .fundoVerde{ } */
+.fv{ background-color: #0f0 !important; }
+/* .bordaVerde{  } */
+.bv{ border: 2px solid #0f0 !important; }
+/* .fundoPreto{  } */
+.fp{ background-color: #000 !important; }
+/* Filtro gray */
+.fc{ filter: grayscale(1); }
