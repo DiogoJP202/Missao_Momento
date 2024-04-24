@@ -5,6 +5,7 @@ export default function(estado){
     const fundoPreto = document.querySelectorAll(".fundoPreto");
     const filtroCinza = document.querySelectorAll(".filtroCinza");
     const fundoCTA = document.querySelector("#CTA");
+    const fundoPrincipal = document.querySelector("#Principal");
 
     if(estado === true){
         letrasVerdes.forEach(element => element.classList.add("lv"));
@@ -13,6 +14,7 @@ export default function(estado){
         fundoPreto.forEach(element => element.classList.add("fp"));
         filtroCinza.forEach(element => element.classList.add("fc"));
         fundoCTA.style.backgroundImage = "none";
+        fundoPrincipal.style.backgroundImage = "none";
 
         return false;
     } 
@@ -23,6 +25,7 @@ export default function(estado){
     fundoPreto.forEach(element => element.classList.remove("fp"));
     filtroCinza.forEach(element => element.classList.remove("fc"));
     fundoCTA.style.backgroundImage = "url(assets/images/FundoSegundarioFallout.jpg)";
+    fundoPrincipal.style.backgroundImage = "url(assets/images/FundoPrimarioFallout.jpg)";
 
     return true;
 }

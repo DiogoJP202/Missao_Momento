@@ -1,1 +1,90 @@
 @charset "UTF-8";
+
+@media screen and (min-width: 764px){
+    header{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #menuH{
+        display: none !important;
+    }
+
+    nav{
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    nav a{
+        font-size: 1rem;
+        width: 100px;
+    }
+
+    nav a > div{
+        top: -34px !important;
+    }
+
+    body > main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 75px;
+        width: 100%;
+        padding: 30px;
+        background-image: url(../images/FundoPrimarioFallout.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    #Principal #sobreNos{
+        max-width: 700px;
+        border-radius: 20px 20px 0 0;
+        box-shadow: -1px 1px 4px #000;
+    }
+
+    #Principal #sobreNos h1{
+        border-radius: 20px 20px 0 0;
+    }
+
+    #Segundaria{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 850px;
+        padding: 30px;
+        gap: 15px;
+    }
+
+    #Segundaria #CTA{
+        width: 110%;
+        max-width: 800px;
+        position: relative;
+        left: -45px;
+        border-radius: 30px;
+        box-shadow: -1px 1px 4px #000;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    #opcoes{
+        display: flex;
+        flex-direction: row !important;
+        box-shadow: -1px 1px 4px #000;
+    }
+
+    #opcoes .opcao:first-child{
+        border: 0;
+        border-right: 1px solid #000;
+    }
+}
